@@ -1,0 +1,6 @@
+Lecture 02: Wednesday 1/10/24
+* filling out handout from class
+* command line and command prompt
+* running commands through ed workspace for the next few weeks
+* some terminal codes
+    * ls - short for ls; this will show a list 
