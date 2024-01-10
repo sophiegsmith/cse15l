@@ -4,3 +4,11 @@ Lecture 02: Wednesday 1/10/24
 * running commands through ed workspace for the next few weeks
 * some terminal codes
     * ls - short for ls; this will show a list 
+    * cd - change directory
+    * files of the current working directory
+    * pwd - print working directory
+    * cd .. - move out of the directory
+    * cat <path1> <path2> - stands for concatenate, all toegther and cat command prints contents of the file
+* tricks to save time: 
+    - 
+* always make sure you are in the working directory
