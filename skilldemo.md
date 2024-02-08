@@ -7,24 +7,25 @@
 **Step 2: Edit the testscript**
 editing the `test.sh` file
 - in the test.sh file currently
-    ```
-    set -e
+  ```
+  set -e
 
-    javac -cp .:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar *.java
+  javac -cp .:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar *.java
 
-    # java -cp .:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar org.junit.runner.JUnitCore 
-    ```
+  # java -cp .:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar org.junit.runner.JUnitCore 
+  ```
+
 - to edit: 
-```
-#!/bin/bash
-set -e
+  ```
+  #!/bin/bash
+  set -e
 
-# Compile the Java files, including the ChatServer and HandlerTests
-javac -cp .:lib/junit-4.13.2.jar:lib/hamcrest-core-1.3.jar ChatServer.java HandlerTests.java
+  # Compile the Java files, including the ChatServer and HandlerTests
+  javac -cp .:lib/junit-4.13.2.jar:lib/hamcrest-core-1.3.jar ChatServer.java HandlerTests.java
 
-# Run the HandlerTests and capture the output
-java -cp .:lib/junit-4.13.2.jar:lib/hamcrest-core-1.3.jar org.junit.runner.JUnitCore HandlerTests  
-```
+  # Run the HandlerTests and capture the output
+  java -cp .:lib/junit-4.13.2.jar:lib/hamcrest-core-1.3.jar org.junit.runner.JUnitCore HandlerTests  
+  ```
 
 **Step 3: Compile and run tests for ChatServer**
 - 1 should fail
@@ -98,12 +99,30 @@ java -cp .:lib/junit-4.13.2.jar:lib/hamcrest-core-1.3.jar org.junit.runner.JUnit
 **Extra Notes**
 - write a new test method for a URL path:
 ```
+@Test
+public void handleRequest3() throws Exception
+{
+  String url1 = "http: //localhost:4000/chat?user=onat&message=hi"
+  String url2 = "http://localhost: 4000/";
+  URI input1 = new URI (url1);
+  URI input2
+  = new URI (url2);
+  String expected = "onat: hi\n\n";
+  h.handleRequest (input1) ;
+  assertEquals (expected, h.handleRequest (input2)) ; 
+}
 ```
 
 - run the test method:
 ```
+javac -cp .:lib/junit-4.xx.jar:lib/hamcrest-core-1.3.jar ChatServer.java HandlerTests.java
+java -cp .:lib/junit-4.xx.jar:lib/hamcrest-core-1.3.jar org.junit.runner.JUnitCore HandlerTests
 ```
 
 - write a method for root path:
 ```
+// Handle request to root path and return all chat messages so far
+        if (url.getPath().equals("/")) {
+            return this.chatHistory; // Return the current chat history
+        }
 ```
