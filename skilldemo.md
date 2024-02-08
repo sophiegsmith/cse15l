@@ -23,7 +23,7 @@ set -e
 javac -cp .:lib/junit-4.13.2.jar:lib/hamcrest-core-1.3.jar ChatServer.java HandlerTests.java
 
 # Run the HandlerTests and capture the output
-java -cp .:lib/junit-4.13.2.jar:lib/hamcrest-core-1.3.jar org.junit.runner.JUnitCore HandlerTests > test-fail-output.txt 2>&1
+java -cp .:lib/junit-4.13.2.jar:lib/hamcrest-core-1.3.jar org.junit.runner.JUnitCore HandlerTests  
 ```
 
 **Step 3: Compile and run tests for ChatServer**
