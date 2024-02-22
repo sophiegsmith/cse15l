@@ -15,6 +15,8 @@ submissions/student4/pa3-code/Sorter.java:    Collections.sort(nums);
 -run grade.sh
 `bash grade.sh`
 
+- add into `grade.sh`: `[[ $? -ne 0 ]]`
+
 -also add in grade.sh
 `find submissions/ -name "results.txt" -exec grep -L "Compile error" {} \; xargs cat > run-results.txt`
 
