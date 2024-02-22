@@ -1,8 +1,11 @@
 **Skill Demo 3 commands**
+
 `find submissions/ name "*.java" -exec wc -l {} + | sort | tail -n 1 | awk '{print $2}' > ../biggest.txt`
+
 - biggest.txt: submissions/student5/Sorter.java
 `grep -r "Collections.sort" submissions/ > ../sorts.txt`
-- sorts.txt
+
+- sorts.txt:
 ```
 submissions/student1/Sorter.java:    Collections.sort(a); // sort using a library function to save time
 submissions/student6/Sorter.java:    Collections.sort(a);
