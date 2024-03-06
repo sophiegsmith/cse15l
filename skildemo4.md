@@ -33,7 +33,7 @@ bash test.sh >/home/student/test-fail-output.txt
 vim ListExamples.java
 ```
 
-***Step 4**
+***Step 4***
 
 once in the file, change these lines:
 
