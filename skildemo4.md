@@ -71,8 +71,10 @@ javac -g BCrypt.java Main.java
 jdb Main mypassword
 > stop in BCrypt.hashpw
 > run
-echo hashed.length > hashed.txt
+echo byte[number] > hashed.txt
 ```
+
+in skill demo i got 24 this is after the locals command
 
 - use `step` until line 677
 - use `next` until line 685
