@@ -80,3 +80,5 @@ in skill demo i got 24 this is after the locals command
 - use `next` until line 685
 - locals
 - exit
+
+- for very last step might have to use print
