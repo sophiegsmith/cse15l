@@ -82,3 +82,7 @@ in skill demo i got 24 this is after the locals command
 - exit
 
 - for very last step might have to use print
+
+```
+printf "Some text\n" > file.txt
+```
